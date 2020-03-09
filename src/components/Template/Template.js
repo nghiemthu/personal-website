@@ -7,6 +7,7 @@ import {
   faInstagram,
   faTwitter
 } from "@fortawesome/free-brands-svg-icons";
+import classNames from "classnames";
 
 import {
   faHome,
@@ -21,13 +22,26 @@ const TemplateTab = ({ to, label, faIcon, active }) => {
   return (
     <Link
       to={to}
-      className={active && styles.Template__sideNavigation__tabs_active}
+      className={classNames(styles.Template__sideNavigation__tabs__tab, {
+        [styles.Template__sideNavigation__tabs__tab_active]: active
+      })}
     >
+      {active && (
+        <>
+          <div
+            className={styles.Template__sideNavigation__tabs__tab__boxAbove}
+          />
+          <div
+            className={styles.Template__sideNavigation__tabs__tab__boxBelow}
+          />
+        </>
+      )}
+
       <FontAwesomeIcon
         className={styles.Template__sideNavigation__tabs__icon}
         icon={faIcon}
-      />{" "}
-      {label}
+      />
+      {/* {label} */}
     </Link>
   );
 };

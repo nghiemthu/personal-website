@@ -16,9 +16,10 @@
     margin-top: $spacing-md;
 
     img {
-      width: 30px;
+      width: 40px;
       border-radius: $border-radius-md;
       margin-left: $spacing-xs;
+      box-shadow: $box-shadow-md;
     }
   }
 
@@ -38,9 +39,8 @@
       }
 
       &__title {
-        font-weight: 400;
-        font-size: $font-size-lg;
-        margin-top: $spacing-xs;
+        font-weight: 200;
+        font-size: $font-size-md;
       }
 
       &__description {

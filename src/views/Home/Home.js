@@ -1,14 +1,12 @@
 import React from "react";
 import styles from "./Home.module.scss";
 import HomeCard from "./HomeCard/HomeCard";
-import thunghiemPhoto from "resources/images/thunghiem.jpg";
+import thunghiemPhoto from "resources/images/homepage/thunghiem.png";
 
 const Home = () => {
   return (
     <div className={styles.Home}>
       <div className={styles.Home__getInTouch}>
-        <div>Get in touch</div>
-
         <img src={thunghiemPhoto} alt="thunghiem" />
       </div>
 
