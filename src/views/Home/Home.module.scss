@@ -1,0 +1,73 @@
+@import "styles/common.scss";
+
+.Home {
+  padding: 0 $spacing-lg;
+
+  &__heading {
+    font-weight: 800;
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-lg;
+  }
+
+  &__getInTouch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: $spacing-md;
+
+    img {
+      width: 30px;
+      border-radius: $border-radius-md;
+      margin-left: $spacing-xs;
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $spacing-xl;
+
+    margin-top: $spacing-lg;
+
+    &__intro {
+      grid-column: 1 / span 2;
+
+      &__heading {
+        font-weight: 800;
+        font-size: $font-size-xl;
+      }
+
+      &__title {
+        font-weight: 400;
+        font-size: $font-size-lg;
+        margin-top: $spacing-xs;
+      }
+
+      &__description {
+        font-weight: 400;
+        font-size: $font-size-md;
+        margin-top: $spacing-md;
+      }
+    }
+  }
+
+  &__motivations {
+    margin-top: $spacing-xxl;
+
+    &__blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2 * $spacing-xl;
+    }
+  }
+
+  &__moreAboutMe {
+    margin-top: $spacing-xxl;
+
+    &__blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2 * $spacing-xl;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../styles/common.scss";
+
+.Template {
+  display: flex;
+  min-height: 100vh;
+
+  &__sideNavigation {
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    margin: $spacing-sm;
+    border-radius: $border-radius-md;
+
+    &__flexSpacing {
+      flex-grow: 1;
+    }
+
+    &__logo {
+      font-size: $font-size-xl;
+      text-align: center;
+      color: $primary-text-color;
+      margin: $spacing-md 0;
+    }
+
+    &__tabs {
+      a {
+        display: block;
+        text-decoration: none;
+        color: $primary-text-color;
+        padding: $spacing-sm $spacing-lg;
+        margin-left: $spacing-md;
+      }
+
+      &_active {
+        background-color: white;
+        border-radius: 25px 0 0 25px;
+        color: $secondary-color !important;
+      }
+
+      &__icon {
+        font-size: $font-size-sm;
+        margin-right: $spacing-md;
+      }
+    }
+
+    &__socials {
+      margin-bottom: $spacing-xl;
+
+      &__button {
+        font-size: $font-size-md;
+        text-align: center;
+        color: $primary-text-color;
+        font-size: $font-size-md;
+        padding: $spacing-sm 0;
+      }
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin: 0 auto;
+    overflow: scroll;
+    max-height: 100vh;
+    max-width: 960px;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
