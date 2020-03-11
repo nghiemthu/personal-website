@@ -9,20 +9,6 @@
     font-size: $font-size-lg;
   }
 
-  &__getInTouch {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: $spacing-md;
-
-    img {
-      width: 40px;
-      border-radius: $border-radius-md;
-      margin-left: $spacing-xs;
-      box-shadow: $box-shadow-md;
-    }
-  }
-
   &__main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

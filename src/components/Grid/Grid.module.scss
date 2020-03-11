@@ -1,0 +1,7 @@
+@import "styles/common.scss";
+
+.Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: $spacing-xl;
+}

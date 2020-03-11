@@ -1,0 +1,81 @@
+@import "styles/common.scss";
+
+.OverviewBlock {
+  box-shadow: $box-shadow-xs;
+  border-radius: $border-radius-sm;
+  padding: $spacing-xl $spacing-lg;
+
+  &__contentWrapper {
+    display: flex;
+    align-items: center;
+
+    &__iconWrapper {
+      flex-grow: 1;
+      margin-right: $spacing-lg;
+      display: flex;
+      align-items: center;
+
+      &__icon {
+        padding: $spacing-md;
+        margin: 0 auto;
+        width: 48px;
+        text-align: center;
+        border-radius: $border-radius-lg;
+        color: white;
+        position: relative;
+        font-size: $font-size-sm;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 54px;
+          height: 54px;
+
+          border-radius: $border-radius-lg;
+          top: -3px;
+          right: -3px;
+          z-index: -1;
+        }
+
+        &_color1 {
+          background-color: $color1;
+
+          &::before {
+            background-color: $color1;
+            opacity: 0.2;
+          }
+        }
+
+        &_color2 {
+          background-color: $color2;
+
+          &::before {
+            background-color: $color2;
+            opacity: 0.2;
+          }
+        }
+
+        &_color3 {
+          background-color: $color3;
+
+          &::before {
+            background-color: $color3;
+            opacity: 0.2;
+          }
+        }
+      }
+    }
+
+    &__content {
+      flex-grow: 2;
+
+      &__number {
+        font-weight: 600;
+      }
+
+      &__label {
+        font-weight: 400;
+      }
+    }
+  }
+}

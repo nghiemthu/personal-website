@@ -1,6 +1,11 @@
 $primary-color: #043353;
 $secondary-color: #18a4e0;
 
+$color1: rgba(237, 106, 90, 1);
+$color2: rgba(84, 19, 136, 1);
+$color3: rgba(32, 191, 85, 1);
+$color4: rgba(254, 215, 102, 1);
+
 $primary-text-color: #faf8f0;
 $secondary-text-color: #d3dde6;
 
@@ -22,5 +27,6 @@ $border-radius-sm: 12px;
 $border-radius-md: 25px;
 $border-radius-lg: 50px;
 
+$box-shadow-xs: 0px 0px 25px 0px rgba(0, 0, 0, 0.075);
 $box-shadow-sm: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
 $box-shadow-md: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);

@@ -4,12 +4,27 @@
   display: flex;
   min-height: 100vh;
 
+  &__getInTouch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: $spacing-md;
+
+    img {
+      width: 40px;
+      border-radius: $border-radius-md;
+      margin-left: $spacing-xs;
+      box-shadow: $box-shadow-md;
+    }
+  }
+
   &__sideNavigation {
     background-color: $secondary-color;
     display: flex;
     flex-direction: column;
     margin: $spacing-sm;
     border-radius: $border-radius-md;
+    max-height: 100vh;
 
     &__flexSpacing {
       flex-grow: 1;
@@ -122,16 +137,19 @@
     }
   }
 
-  &__content {
+  &__scrollable {
     flex-grow: 1;
-    margin: 0 auto;
     overflow: scroll;
     max-height: 100vh;
-    max-width: 960px;
     -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 960px;
   }
 }

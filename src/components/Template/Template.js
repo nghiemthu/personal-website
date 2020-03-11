@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Template.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faYoutube,
@@ -17,8 +17,12 @@ import {
   faImages,
   faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
+import thunghiemPhoto from "resources/images/homepage/thunghiem.png";
 
-const TemplateTab = ({ to, label, faIcon, active }) => {
+const TemplateTab = ({ to, label, faIcon }) => {
+  const { pathname } = useLocation();
+  const active = pathname === to;
+
   return (
     <Link
       to={to}
@@ -53,7 +57,7 @@ const Template = ({ children }) => {
         <div className={styles.Template__sideNavigation__logo}>Tuu.</div>
 
         <div className={styles.Template__sideNavigation__tabs}>
-          <TemplateTab to="/" label="Home" faIcon={faHome} active />
+          <TemplateTab to="/" label="Home" faIcon={faHome} />
 
           <TemplateTab to="/projects" label="Projects" faIcon={faLaptopCode} />
 
@@ -81,7 +85,14 @@ const Template = ({ children }) => {
         </div>
       </div>
 
-      <div className={styles.Template__content}>{children}</div>
+      <div className={styles.Template__scrollable}>
+        <div className={styles.Template__content}>
+          <div className={styles.Template__getInTouch}>
+            <img src={thunghiemPhoto} alt="thunghiem" />
+          </div>
+          {children}
+        </div>
+      </div>
     </div>
   );
 };

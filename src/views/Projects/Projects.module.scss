@@ -1,0 +1,15 @@
+@import "styles/common.scss";
+
+.Projects {
+  &__overview {
+    margin-top: $spacing-xl;
+
+    &__content {
+      margin-top: $spacing-md;
+    }
+  }
+
+  &__projectList {
+    margin-top: $spacing-xl;
+  }
+}
