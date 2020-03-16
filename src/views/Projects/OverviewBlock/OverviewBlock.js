@@ -2,9 +2,22 @@ import React from "react";
 import styles from "./OverviewBlock.module.scss";
 import classnames from "classnames";
 
-const OverviewBlock = ({ label, number, icon, index }) => {
+const OverviewBlock = ({ label, number, icon, index, active }) => {
   return (
-    <div className={styles.OverviewBlock}>
+    <div
+      className={classnames([
+        styles.OverviewBlock,
+        {
+          [styles.OverviewBlock_color1_active]: index === 1 && active
+        },
+        {
+          [styles.OverviewBlock_color2_active]: index === 2
+        },
+        {
+          [styles.OverviewBlock_color3_active]: index === 3 && active
+        }
+      ])}
+    >
       <div className={styles.OverviewBlock__contentWrapper}>
         <div className={styles.OverviewBlock__contentWrapper__iconWrapper}>
           <div

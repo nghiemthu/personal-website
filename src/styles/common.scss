@@ -6,16 +6,28 @@ $color2: rgba(84, 19, 136, 1);
 $color3: rgba(32, 191, 85, 1);
 $color4: rgba(254, 215, 102, 1);
 
+$grey2: #f5f5f5;
+$grey3: #f0f0f0;
+$grey4: #dedede;
+$grey5: #c2c2c2;
+$grey6: #979797;
+$grey7: #818181;
+$grey8: #606060;
+$grey9: #3c3c3c;
+$grey10: #3c3c3c;
+
+$main-background-color: $grey3;
+
 $primary-text-color: #faf8f0;
 $secondary-text-color: #d3dde6;
 
-$font-size-xs: 8px;
 $font-size-sm: 12px;
 $font-size-md: 16px;
 $font-size-lg: 20px;
 $font-size-xl: 28px;
 $font-size-xxl: 32px;
 
+$spacing-xxs: 4px;
 $spacing-xs: 8px;
 $spacing-sm: 12px;
 $spacing-md: 16px;
@@ -23,10 +35,11 @@ $spacing-lg: 24px;
 $spacing-xl: 32px;
 $spacing-xxl: 48px;
 
+$border-radius-xs: 8px;
 $border-radius-sm: 12px;
 $border-radius-md: 25px;
 $border-radius-lg: 50px;
 
-$box-shadow-xs: 0px 0px 25px 0px rgba(0, 0, 0, 0.075);
-$box-shadow-sm: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
-$box-shadow-md: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+$box-shadow-xs: 0px 6px 25px 0px rgba(0, 0, 0, 0.075);
+$box-shadow-sm: 0px 6px 25px 0px rgba(0, 0, 0, 0.15);
+$box-shadow-md: 0px 6px 25px 0px rgba(0, 0, 0, 0.25);

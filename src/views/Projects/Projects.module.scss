@@ -5,11 +5,15 @@
     margin-top: $spacing-xl;
 
     &__content {
-      margin-top: $spacing-md;
+      margin-top: $spacing-lg;
     }
   }
 
   &__projectList {
     margin-top: $spacing-xl;
+
+    &__heading {
+      margin-bottom: $spacing-lg;
+    }
   }
 }

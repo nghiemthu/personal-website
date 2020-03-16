@@ -4,6 +4,8 @@ import styles from "./Projects.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGamepad, faGlobe, faMouse } from "@fortawesome/free-solid-svg-icons";
 import OverviewBlock from "./OverviewBlock/OverviewBlock";
+import ProjectCard from "./ProjectCard/ProjectCard";
+import projects from "./projectData";
 
 const Projects = () => {
   return (
@@ -53,11 +55,12 @@ const Projects = () => {
       </div>
 
       <div className={styles.Projects__projectList}>
-        <h4>Projects</h4>
+        <h4 className={styles.Projects__projectList__heading}>Projects</h4>
+
         <Grid>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
+          {projects.map(project => (
+            <ProjectCard project={project} />
+          ))}
         </Grid>
       </div>
     </>

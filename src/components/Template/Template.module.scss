@@ -3,6 +3,7 @@
 .Template {
   display: flex;
   min-height: 100vh;
+  background-color: $main-background-color;
 
   &__getInTouch {
     display: flex;
@@ -54,7 +55,7 @@
         &__boxAbove {
           height: 12px;
           width: 12px;
-          background-color: white;
+          background-color: $main-background-color;
           border-radius: 0;
 
           position: absolute;
@@ -77,7 +78,7 @@
         &__boxBelow {
           height: 12px;
           width: 12px;
-          background-color: white;
+          background-color: $main-background-color;
           border-radius: 0;
 
           position: absolute;
@@ -98,7 +99,7 @@
         }
 
         &_active {
-          background-color: white;
+          background-color: $main-background-color;
           color: $secondary-color !important;
           position: relative;
         }
@@ -109,7 +110,7 @@
           content: "";
           height: 24px;
           width: 8px;
-          background-color: white;
+          background-color: $main-background-color;
           border-radius: $border-radius-md;
 
           position: absolute;

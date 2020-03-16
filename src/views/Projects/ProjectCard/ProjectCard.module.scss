@@ -1,0 +1,225 @@
+@import "styles/common";
+
+.ProjectCard {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 $border-radius-sm $border-radius-sm;
+  padding: 0 $spacing-lg $spacing-sm;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+    background-color: $color1;
+  }
+
+  &_color1 {
+    &::before {
+      background-color: $color1;
+    }
+  }
+
+  &_color2 {
+    &::before {
+      background-color: $color2;
+    }
+  }
+
+  &_color3 {
+    &::before {
+      background-color: $color3;
+    }
+  }
+
+  &__group {
+    width: fit-content;
+    background-color: $color1;
+    border-radius: 0 0 $border-radius-sm $border-radius-sm;
+    color: $primary-text-color;
+    padding: $spacing-xxs $spacing-sm;
+    font-size: $font-size-sm;
+
+    &_color1 {
+      background-color: $color1;
+    }
+
+    &_color2 {
+      background-color: $color2;
+    }
+
+    &_color3 {
+      background-color: $color3;
+    }
+  }
+
+  &__name {
+    margin-top: $spacing-lg;
+  }
+
+  &__description {
+    margin-top: $spacing-md;
+    margin-bottom: $spacing-md;
+    color: $grey9;
+    flex-grow: 1;
+  }
+
+  &__tagWrapper {
+    margin-top: $spacing-sm;
+
+    &__tag {
+      border: 1px solid $grey4;
+      padding: $spacing-xxs;
+      border-radius: $border-radius-xs;
+      font-size: $font-size-sm;
+      margin-right: $spacing-sm;
+      color: $grey8;
+    }
+  }
+
+  &__footer {
+    margin-top: $spacing-md;
+  }
+
+  &__buttonWrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $main-background-color;
+    width: 40%;
+    height: 50px;
+    border-top-left-radius: $border-radius-sm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      width: 70%;
+      height: 60%;
+      border-radius: $border-radius-xs;
+      border: none;
+      background-color: $color1;
+      color: $primary-text-color;
+      font-size: $font-size-sm;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: $box-shadow-xs;
+      position: relative;
+
+      &:hover {
+      }
+    }
+
+    &_color1 {
+      button {
+        background-color: $color1;
+      }
+    }
+
+    &_color2 {
+      button {
+        background-color: $color2;
+      }
+    }
+
+    &_color3 {
+      button {
+        background-color: $color3;
+      }
+    }
+
+    &__boxAbove {
+      height: 12px;
+      width: 12px;
+      background-color: $main-background-color;
+      border-radius: 0;
+
+      position: absolute;
+      top: -12px;
+      right: 0;
+
+      &::before {
+        content: "";
+        height: 12px;
+        width: 12px;
+        background-color: white;
+        border-radius: 0 0 $border-radius-md 0;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &__boxBelow {
+      height: 12px;
+      width: 12px;
+      background-color: $main-background-color;
+      border-radius: 0;
+
+      position: absolute;
+      bottom: 0px;
+      left: -12px;
+
+      &::before {
+        content: "";
+        height: 12px;
+        width: 12px;
+        background-color: white;
+        border-radius: 0 0 $border-radius-md 0;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__progress {
+    margin-top: $spacing-md;
+    height: 10px;
+    border-radius: $border-radius-sm;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    div {
+      background-color: $color1;
+      border-radius: $border-radius-sm;
+      display: block;
+      height: 4px;
+      width: 100%;
+      box-sizing: initial;
+      margin: 0 2px;
+    }
+
+    &_color1 {
+      border-color: $color1;
+
+      div {
+        background-color: $color1;
+      }
+    }
+
+    &_color2 {
+      border-color: $color2;
+
+      div {
+        background-color: $color2;
+      }
+    }
+
+    &_color3 {
+      border-color: $color3;
+
+      div {
+        background-color: $color3;
+      }
+    }
+  }
+}
