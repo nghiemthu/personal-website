@@ -5,7 +5,8 @@ const projects = [
     description: "Using react, redux to make Roguelike Dungeon Crawler Game",
     skills: ["React", "Redux", "Javascript"],
     progress: 100,
-    level: "Basic"
+    level: "Basic",
+    imgSrc: "https://i.ibb.co/Qd2672N/Screen-Shot-2020-03-16-at-9-18-37-PM.png"
   },
   {
     group: "Game",
@@ -21,7 +22,8 @@ const projects = [
     description: "Tic Tac Toe with jQuery, which has unbeatable AI",
     skills: ["CSS", "HTML", "Javascript"],
     progress: 100,
-    level: "Advanced"
+    level: "Advanced",
+    imgSrc: "https://i.ibb.co/MGnGMfR/Screen-Shot-2020-03-16-at-9-20-50-PM.png"
   },
   {
     group: "Web",
@@ -29,7 +31,8 @@ const projects = [
     description: "Redux app with twitter authentication and mongoDB",
     skills: ["jQuery", "HTML", "CSS"],
     progress: 100,
-    level: "Advanced"
+    level: "Advanced",
+    imgSrc: "https://i.ibb.co/8P0703L/Screen-Shot-2020-03-16-at-9-17-30-PM.png"
   }
 ];
 

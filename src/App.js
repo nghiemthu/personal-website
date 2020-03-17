@@ -4,6 +4,7 @@ import Template from "./components/Template/Template";
 
 import Home from "views/Home/Home";
 import Projects from "views/Projects/Projects";
+import Gallery from "views/Gallery/Gallery";
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
 
           <Route path="/projects">
             <Projects />
+          </Route>
+
+          <Route path="/gallery">
+            <Gallery />
           </Route>
         </Switch>
       </Template>

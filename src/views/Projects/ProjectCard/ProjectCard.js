@@ -3,7 +3,7 @@ import styles from "./ProjectCard.module.scss";
 import classnames from "classnames";
 
 const ProjectCard = ({
-  project: { projectName, description, level, skills, group }
+  project: { projectName, description, level, skills, group, imgSrc }
 }) => {
   const isWeb = group === "Web";
   const isDesign = group === "Design";
@@ -40,6 +40,12 @@ const ProjectCard = ({
       >
         {group}
       </div>
+
+      {imgSrc && (
+        <div className={styles.ProjectCard__image}>
+          <img src={imgSrc} alt={projectName} />
+        </div>
+      )}
 
       <h4 className={styles.ProjectCard__name}>{projectName}</h4>
 

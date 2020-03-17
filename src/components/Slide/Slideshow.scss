@@ -1,0 +1,99 @@
+@import "styles/common.scss";
+
+.bss-slides {
+  /* the container element needs to be
+    relatively positioned and display:
+    block so that the slides can be
+    "stacked up" inside of it */
+  position: relative;
+  display: block;
+  outline: none;
+}
+.bss-slides figure {
+  /* these are the individual slides
+    each containing an img and caption.
+    they are positioned absolute at the
+    top of the slideshow container, so they
+    will be stacked up like a deck of cards */
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.bss-slides figure:first-child {
+  /* the very first slide is relatively
+    positioned in order to give height
+    to the container element */
+  position: relative;
+}
+.bss-slides figure img {
+  /* all slide images are made "invisible"
+    with an opacity of 0, then we
+    set the transition property so
+    that later when we change it,
+    it transitions over 1.2 seconds for a
+    fade in/out effect instead of changing
+    instantly */
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1.2s;
+  border-radius: $border-radius-md;
+}
+.bss-slides .bss-show img {
+  /* this is for the currently visible slide
+    it's the only one that shows, with full
+    opacity */
+  opacity: 1;
+}
+.bss-slides figcaption {
+  /* the caption is positioned absolutely near
+    the bottom right of the slide, then we hide it
+    with an opacity of 0, and set the transition
+    property just like with the img element above */
+  // position: absolute;
+  // bottom: 0.75em;
+  // right: 0.35em;
+  opacity: 0;
+  // transition: opacity 1.2s;
+}
+.bss-slides .bss-show figcaption {
+  /* this is for the currently visible slide caption
+    it's the only one that shows, with full opacity,
+    just like the current img. the caption also
+    has a z-index of 2 to ensure it always appears
+    above the img */
+  z-index: 2;
+  opacity: 1;
+}
+.bss-next,
+.bss-prev {
+  /* for the next/prev buttons
+    this positions them vertically
+    in the middle of the slides,
+    with a z-index to ensure they appear
+    over the slides, an opacity of .5
+    so they are semi-transparent by default,
+    and the user-select none is so they don't
+    accidentally get highlighted when clicking
+    on them */
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  opacity: 0.5;
+  user-select: none;
+}
+.bss-next:hover,
+.bss-prev:hover {
+  /* give the buttons a pointer/hand cursor
+    and highlight them with full opacity
+    when hovering */
+  cursor: pointer;
+  opacity: 1;
+}
+.bss-next {
+  /* position 'next' button at right */
+  right: 0;
+}
+.bss-prev {
+  /* position 'previous' button at left */
+  left: 0;
+}
