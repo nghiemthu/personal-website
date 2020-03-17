@@ -11,7 +11,7 @@ const OverviewBlock = ({ label, number, icon, index, active }) => {
           [styles.OverviewBlock_color1_active]: index === 1 && active
         },
         {
-          [styles.OverviewBlock_color2_active]: index === 2
+          [styles.OverviewBlock_color2_active]: index === 2 && active
         },
         {
           [styles.OverviewBlock_color3_active]: index === 3 && active

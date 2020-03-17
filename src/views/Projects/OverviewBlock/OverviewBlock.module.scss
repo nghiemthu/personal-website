@@ -1,15 +1,9 @@
 @import "styles/common.scss";
 
 .OverviewBlock {
-  // box-shadow: $box-shadow-xs;
   border-radius: $border-radius-sm;
   padding: $spacing-xs;
   background-color: white;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: $box-shadow-xs;
-  }
 
   &_color1_active {
     border: 1px solid $color1;
