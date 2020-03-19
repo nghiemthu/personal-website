@@ -3,7 +3,7 @@ import styles from "./HomeCard.module.scss";
 
 const HomeCard = ({ imgSrc, title, description }) => {
   return (
-    <div>
+    <div className={styles.HomeCard}>
       <div className={styles.HomeCard__image}>
         <img src={imgSrc} alt="panel-img" />
       </div>

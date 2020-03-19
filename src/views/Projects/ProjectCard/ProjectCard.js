@@ -24,7 +24,7 @@ const ProjectCard = ({
         }
       ])}
     >
-      <div
+      {/* <div
         className={classnames(
           styles.ProjectCard__group,
           {
@@ -39,7 +39,7 @@ const ProjectCard = ({
         )}
       >
         {group}
-      </div>
+      </div> */}
 
       {imgSrc && (
         <div className={styles.ProjectCard__image}>
@@ -47,7 +47,7 @@ const ProjectCard = ({
         </div>
       )}
 
-      <h4 className={styles.ProjectCard__name}>{projectName}</h4>
+      <h3 className={styles.ProjectCard__name}>{projectName}</h3>
 
       <div className={styles.ProjectCard__tagWrapper}>
         {skills.map(skill => (
@@ -81,21 +81,21 @@ const ProjectCard = ({
       </div>
 
       {/* <div
-        className={classnames([
-          styles.ProjectCard__progress,
-          {
-            [styles.ProjectCard__progress_color1]: isWeb
-          },
-          {
-            [styles.ProjectCard__progress_color2]: isDesign
-          },
-          {
-            [styles.ProjectCard__progress_color3]: isGame
-          }
-        ])}
-      >
-        <div />
-      </div> */}
+          className={classnames([
+            styles.ProjectCard__progress,
+            {
+              [styles.ProjectCard__progress_color1]: isWeb
+            },
+            {
+              [styles.ProjectCard__progress_color2]: isDesign
+            },
+            {
+              [styles.ProjectCard__progress_color3]: isGame
+            }
+          ])}
+        >
+          <div />
+        </div> */}
     </div>
   );
 };

@@ -5,6 +5,8 @@ import Template from "./components/Template/Template";
 import Home from "views/Home/Home";
 import Projects from "views/Projects/Projects";
 import Gallery from "views/Gallery/Gallery";
+import "./App.scss";
+import Skills from "views/Skills/Skills";
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
 
           <Route path="/gallery">
             <Gallery />
+          </Route>
+
+          <Route path="/skills">
+            <Skills />
           </Route>
         </Switch>
       </Template>

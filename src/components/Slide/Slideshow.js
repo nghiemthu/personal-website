@@ -4,7 +4,7 @@ import makeBSS from "./makeBSS";
 
 const opts = {
   auto: {
-    speed: 5000,
+    speed: 4000,
     pauseOnHover: true
   },
   fullScreen: true,
@@ -25,11 +25,9 @@ const Slideshow = () => {
         />
 
         <figcaption>
-          "Medium" by{" "}
-          <a href="https://www.flickr.com/photos/thomashawk/14586158819/">
-            Thomas Hawk
-          </a>
-          .
+          <div className="photo-label">In feugiat odio rutrum</div>
+
+          <div className="photo-time">August 2019</div>
         </figcaption>
       </figure>
       <figure>
@@ -39,11 +37,9 @@ const Slideshow = () => {
         />
 
         <figcaption>
-          "Colorado" by{" "}
-          <a href="https://www.flickr.com/photos/stuckincustoms/88370744">
-            Trey Ratcliff
-          </a>
-          .
+          <div className="photo-label">Vivamus sodales mi ac lorem</div>
+
+          <div className="photo-time">September 2019</div>
         </figcaption>
       </figure>
     </div>

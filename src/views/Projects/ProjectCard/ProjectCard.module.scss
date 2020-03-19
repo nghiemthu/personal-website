@@ -3,21 +3,22 @@
 .ProjectCard {
   position: relative;
   background-color: white;
-  border-radius: 0 0 $border-radius-sm $border-radius-sm;
+  border-radius: $border-radius-sm;
   padding: 0 $spacing-lg $spacing-sm;
   display: flex;
   flex-direction: column;
+  height: 100%;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    width: 100%;
-    border-radius: $border-radius-lg $border-radius-lg 0 0;
-    background-color: $color1;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 3px;
+  //   width: 100%;
+  //   border-radius: $border-radius-lg $border-radius-lg 0 0;
+  //   background-color: $color1;
+  // }
 
   &_color1 {
     &::before {
@@ -84,9 +85,9 @@
   }
 
   &__tagWrapper {
-    margin-top: $spacing-sm;
-
     &__tag {
+      margin-top: $spacing-sm;
+      display: inline-block;
       border: 1px solid $grey4;
       padding: $spacing-xxs;
       border-radius: $border-radius-xs;
@@ -98,6 +99,7 @@
 
   &__footer {
     margin-top: $spacing-md;
+    color: $grey6;
   }
 
   &__buttonWrapper {

@@ -136,6 +136,10 @@
         padding: $spacing-sm 0;
       }
     }
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
 
   &__scrollable {
@@ -151,6 +155,9 @@
 
   &__content {
     margin: 0 auto;
+    margin-bottom: $spacing-xl;
+    margin-top: $spacing-xl;
     max-width: 960px;
+    padding: 0 $spacing-lg;
   }
 }

@@ -12,6 +12,8 @@ body {
   margin: 0;
   line-height: 1.4em;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {

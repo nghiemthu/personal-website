@@ -14,7 +14,7 @@ const Projects = () => {
         <h4>Overview</h4>
 
         <div className={styles.Projects__overview__content}>
-          <Grid>
+          <Grid gapSize="sm">
             <OverviewBlock
               icon={
                 <FontAwesomeIcon
@@ -57,7 +57,7 @@ const Projects = () => {
       <div className={styles.Projects__projectList}>
         <h4 className={styles.Projects__projectList__heading}>Projects</h4>
 
-        <Grid>
+        <Grid gapSize="lg">
           {projects.map(project => (
             <ProjectCard project={project} />
           ))}

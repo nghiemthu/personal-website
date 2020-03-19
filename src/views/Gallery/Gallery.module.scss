@@ -1,0 +1,30 @@
+@import "styles/common.scss";
+
+.Gallery {
+  margin-top: $spacing-lg;
+
+  h4 {
+    margin-top: $spacing-xxl;
+  }
+
+  &__intro {
+    &__description {
+      margin-bottom: $spacing-xs;
+      font-weight: 500;
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__image {
+    border-radius: $border-radius-sm;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

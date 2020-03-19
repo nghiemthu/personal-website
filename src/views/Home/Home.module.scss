@@ -1,14 +1,6 @@
 @import "styles/common.scss";
 
 .Home {
-  padding: 0 $spacing-lg;
-
-  &__heading {
-    font-weight: 800;
-    margin-bottom: $spacing-lg;
-    font-size: $font-size-lg;
-  }
-
   &__main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -20,8 +12,8 @@
       grid-column: 1 / span 2;
 
       &__heading {
-        font-weight: 800;
-        font-size: $font-size-xl;
+        font-weight: 600;
+        font-size: $font-size-xxl;
       }
 
       &__title {
@@ -34,6 +26,10 @@
         font-size: $font-size-md;
         margin-top: $spacing-md;
       }
+    }
+
+    @media screen and (max-width: 800px) {
+      display: block;
     }
   }
 

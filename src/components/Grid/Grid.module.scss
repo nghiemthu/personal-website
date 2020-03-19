@@ -4,4 +4,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: $spacing-xl;
+
+  @media screen and (max-width: 800px) {
+    display: block;
+
+    &__item {
+      margin-bottom: $spacing-xl;
+
+      &_gapSm {
+        margin-bottom: $spacing-sm;
+      }
+
+      &_gapLg {
+        margin-bottom: $spacing-xxl;
+      }
+    }
+  }
 }

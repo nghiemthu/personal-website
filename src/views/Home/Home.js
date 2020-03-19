@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Home.module.scss";
 import HomeCard from "./HomeCard/HomeCard";
+import Grid from "components/Grid/Grid";
 
 const Home = () => {
   return (
@@ -25,34 +26,32 @@ const Home = () => {
       <div className={styles.Home__motivations}>
         <h4 className={styles.Home__heading}>What motivates me</h4>
 
-        <div className={styles.Home__motivations__blocks}>
+        <Grid gapSize="lg">
           <HomeCard
             title="Web Developnent"
             description="Nunc quis neque a neque venenatis tristique. Sed a facilisis diam.
             Mauris a ligula felis"
             imgSrc="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
           />
-
           <HomeCard
             title="Web Design"
             description="Nunc quis neque a neque venenatis tristique. Sed a facilisis diam.
             Mauris a ligula felis"
             imgSrc="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
           />
-
           <HomeCard
             title="Game Development"
             description="Nunc quis neque a neque venenatis tristique. Sed a facilisis diam.
             Mauris a ligula felis"
             imgSrc="https://images.unsplash.com/photo-1567391454009-0894f63e5550?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
           />
-        </div>
+        </Grid>
       </div>
 
       <div className={styles.Home__moreAboutMe}>
         <h4 className={styles.Home__heading}>More about me</h4>
 
-        <div className={styles.Home__motivations__blocks}>
+        <Grid gapSize="lg">
           <HomeCard
             title="Cooking"
             description="Nunc quis neque a neque venenatis tristique. Sed a facilisis diam.
@@ -66,7 +65,7 @@ const Home = () => {
             Mauris a ligula felis"
             imgSrc="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
           />
-        </div>
+        </Grid>
       </div>
     </div>
   );

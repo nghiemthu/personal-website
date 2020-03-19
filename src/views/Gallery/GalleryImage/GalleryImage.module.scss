@@ -1,0 +1,82 @@
+@import "styles/common.scss";
+
+.GalleryImage {
+  border-radius: $border-radius-sm;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+
+  &__wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-sm;
+  }
+
+  img {
+    width: 100%;
+    transition: all 0.35s ease-in-out;
+  }
+
+  &__hoverBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.35s ease-in-out;
+  }
+
+  &__details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    visibility: hidden;
+  }
+
+  h3 {
+    padding: 35px;
+    padding-top: 170px;
+    transition: all 0.35s ease-in-out;
+    opacity: 0;
+  }
+
+  p {
+    transition: all 0.35s ease-in-out;
+    opacity: 0;
+  }
+
+  &:hover {
+    h3 {
+      transform: translateY(10%);
+      opacity: 1;
+    }
+
+    p {
+      transform: translateY(-60%);
+      opacity: 1;
+    }
+
+    img {
+      filter: grayscale(10%);
+      transform: scale(1.1);
+    }
+  }
+
+  &:hover &__details {
+    visibility: visible;
+  }
+
+  &:hover &__hoverBackground {
+    background: rgba(85, 85, 85, 0.5);
+  }
+}

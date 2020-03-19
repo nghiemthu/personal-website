@@ -72,8 +72,8 @@ const makeBSS = function(el, options) {
         spanNext.classList.add("bss-next");
 
         // add contents
-        spanPrev.innerHTML = "&laquo;";
-        spanNext.innerHTML = "&raquo;";
+        spanPrev.innerHTML = "Prev";
+        spanNext.innerHTML = "Next";
 
         // append elements to fragment, then append fragment to DOM
         docFrag.appendChild(spanPrev);
