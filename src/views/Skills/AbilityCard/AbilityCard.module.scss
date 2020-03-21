@@ -1,20 +1,19 @@
 @import "styles/common.scss";
 
-.HomeCard {
+.AbilityCard {
   position: relative;
-  cursor: pointer;
   z-index: 0;
-  padding: $spacing-lg;
+  padding: $spacing-md;
 
   &::before {
     z-index: -1;
     content: "";
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 88%;
+    width: 94%;
     height: 88%;
-    background-color: $grey1;
+    background-color: white;
     border-radius: $border-radius-sm;
     transition: all 0.25s ease-in-out;
   }
@@ -41,14 +40,31 @@
   }
 
   &__label {
-    font-size: $font-size-lg;
-    font-weight: 500;
-    margin-top: $spacing-lg;
+    margin-top: $spacing-sm;
+    font-weight: 600;
   }
 
-  &__description {
-    font-size: $font-size-md;
-    font-weight: 400;
+  &__technologies {
     margin-top: $spacing-xs;
+
+    &__icon {
+      color: $grey8;
+      margin-right: $spacing-xs;
+      margin-left: -$spacing-xxs;
+      opacity: 0;
+
+      transition: all 0.25s ease-in-out 0.25s;
+    }
+  }
+
+  &:hover &__technologies {
+    &__icon {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+
+  &_noDelay {
+    transition-delay: 0s !important;
   }
 }

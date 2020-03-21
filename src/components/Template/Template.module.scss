@@ -137,7 +137,7 @@
       }
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       display: none;
     }
   }
@@ -155,7 +155,7 @@
 
   &__content {
     margin: 0 auto;
-    margin-bottom: $spacing-xl;
+    margin-bottom: $spacing-xl * 3;
     margin-top: $spacing-xl;
     max-width: 960px;
     padding: 0 $spacing-lg;

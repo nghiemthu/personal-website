@@ -1,20 +1,55 @@
 @import "styles/common.scss";
 
 .Skills {
+  h4 {
+    margin-top: $spacing-lg;
+  }
+
   &__intro {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    img {
-      width: 160px;
-      height: 160px;
+    &__img {
+      padding: 3px;
+      border: 1px solid $grey5;
       border-radius: $border-radius-round;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 160px;
+        height: 160px;
+        border-radius: $border-radius-round;
+      }
     }
 
     h3 {
       margin: $spacing-lg 0 $spacing-xxs;
+    }
+  }
+
+  &__skills {
+    &__skill {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      &__icon {
+        font-size: $font-size-xxl;
+        background-color: white;
+        padding: $spacing-sm $spacing-lg;
+        border-radius: $border-radius-sm;
+      }
+    }
+  }
+
+  &__experiences {
+    h4 {
+      margin-top: $spacing-xl;
     }
   }
 }

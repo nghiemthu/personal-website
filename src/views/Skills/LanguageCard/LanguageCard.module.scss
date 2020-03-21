@@ -1,0 +1,40 @@
+@import "styles/common.scss";
+
+.LanguageCard {
+  display: flex;
+
+  &__imageWrapper {
+    width: 60%;
+    min-width: 60%;
+
+    &__image {
+      border-radius: $border-radius-sm;
+      height: 100px;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: $box-shadow-sm;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__details {
+    margin-left: $spacing-md;
+
+    &__language {
+      font-size: $font-size-md;
+      font-weight: 600;
+    }
+
+    &__level {
+      margin-top: $spacing-xxs;
+      font-size: $font-size-sm;
+      font-weight: 400;
+    }
+  }
+}

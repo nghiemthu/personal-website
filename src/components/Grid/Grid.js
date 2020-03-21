@@ -2,9 +2,15 @@ import React from "react";
 import styles from "./Grid.module.scss";
 import classNames from "classnames";
 
-const Grid = ({ children, gapSize, ...props }) => {
+const Grid = ({ children, gapSize, columns = 3, ...props }) => {
   return (
-    <div className={styles.Grid} {...props}>
+    <div
+      className={classNames([
+        styles.Grid,
+        { [styles.Grid_2]: columns === 2, [styles.Grid_3]: columns === 3 }
+      ])}
+      {...props}
+    >
       {children.map(child => (
         <div
           className={classNames([

@@ -2,10 +2,17 @@
 
 .Grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: $spacing-xl;
 
-  @media screen and (max-width: 800px) {
+  &_2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &_3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (max-width: 900px) {
     display: block;
 
     &__item {
