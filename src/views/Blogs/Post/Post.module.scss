@@ -1,0 +1,14 @@
+@import "styles/common.scss";
+
+.Post {
+  margin-top: $spacing-lg;
+
+  &__title {
+    font-weight: 500;
+    font-size: $font-size-lg;
+  }
+
+  &__content {
+    margin-top: $spacing-lg;
+  }
+}

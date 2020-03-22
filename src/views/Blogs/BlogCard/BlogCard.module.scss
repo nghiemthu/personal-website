@@ -1,0 +1,66 @@
+@import "styles/common.scss";
+
+.BlogCard {
+  padding: $spacing-xs;
+  display: flex;
+  align-items: center;
+  border-radius: $border-radius-sm;
+  z-index: 0;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: $spacing-lg;
+
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 84%;
+    height: 88%;
+    background-color: $grey1;
+    border-radius: $border-radius-sm;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__img {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+    height: 160px;
+    background-color: $grey4;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__details {
+    flex-grow: 5;
+    margin-left: $spacing-lg;
+
+    &__title {
+      font-weight: 600;
+      font-size: $font-size-xl;
+    }
+
+    &__date {
+      font-weight: 300;
+    }
+  }
+}
