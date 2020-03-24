@@ -7,6 +7,10 @@
     grid-gap: $spacing-xl;
 
     margin-top: $spacing-lg;
+    background-color: $color1;
+    padding: $spacing-xl;
+    color: $primary-text-color;
+    border-radius: $border-radius-md;
 
     &__intro {
       grid-column: 1 / span 2;
@@ -14,11 +18,13 @@
       &__heading {
         font-weight: 600;
         font-size: $font-size-xxl;
+        text-transform: uppercase;
       }
 
       &__title {
         font-weight: 200;
         font-size: $font-size-md;
+        color: $primary-text-color;
       }
 
       &__description {
@@ -26,10 +32,28 @@
         font-size: $font-size-md;
         margin-top: $spacing-md;
       }
+
+      &__img {
+        img {
+          width: 100%;
+        }
+      }
     }
 
     @media screen and (max-width: 900px) {
       display: block;
+
+      &__intro {
+        &__img {
+          margin-top: $spacing-lg;
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 50%;
+          }
+        }
+      }
     }
   }
 

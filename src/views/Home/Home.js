@@ -21,6 +21,12 @@ const Home = () => {
             with beautiful and user friendly websites
           </p>
         </div>
+        <div className={styles.Home__main__intro__img}>
+          <img
+            alt="home"
+            src="https://assets-ouch.icons8.com/thumb/732/4f6fdc97-a390-4d76-9448-2a778bf93c8c.png"
+          />
+        </div>
       </div>
 
       <div className={styles.Home__motivations}>

@@ -36,17 +36,22 @@
   }
 
   &__img {
-    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: $border-radius-sm;
     overflow: hidden;
-    height: 160px;
+    max-width: 35%;
+    height: 200px;
+
     background-color: $grey4;
 
     img {
       max-width: 100%;
+    }
+
+    @media screen and (max-width: 900px) {
+      height: auto;
     }
   }
 
@@ -61,6 +66,13 @@
 
     &__date {
       font-weight: 300;
+    }
+
+    @media screen and (max-width: 900px) {
+      &__title {
+        font-weight: 500;
+        font-size: $font-size-lg;
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Template.module.scss";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,9 @@ import {
   faCode,
   faPen,
   faImages,
-  faEnvelope
+  faEnvelope,
+  faChevronRight,
+  faChevronLeft
 } from "@fortawesome/free-solid-svg-icons";
 import thunghiemPhoto from "resources/images/homepage/thunghiem.png";
 
@@ -51,9 +53,25 @@ const TemplateTab = ({ to, label, faIcon }) => {
 };
 
 const Template = ({ children }) => {
+  const [navigationHidden, setNavigationHidden] = useState(true);
+
   return (
     <div className={styles.Template}>
-      <div className={styles.Template__sideNavigation}>
+      <div
+        className={classNames([
+          styles.Template__sideNavigation,
+          { [styles.Template__sideNavigation_hidden]: navigationHidden }
+        ])}
+      >
+        <div
+          className={styles.Template__sideNavigation__bars}
+          onClick={() => setNavigationHidden(!navigationHidden)}
+        >
+          <FontAwesomeIcon
+            icon={navigationHidden ? faChevronRight : faChevronLeft}
+          />
+        </div>
+
         <div className={styles.Template__sideNavigation__logo}>Tuu.</div>
 
         <div className={styles.Template__sideNavigation__tabs}>
@@ -87,10 +105,22 @@ const Template = ({ children }) => {
 
       <div className={styles.Template__scrollable}>
         <div className={styles.Template__content}>
-          <div className={styles.Template__getInTouch}>
-            <img src={thunghiemPhoto} alt="thunghiem" />
+          <div className={styles.Template__content__top}>
+            <div className={styles.Template__content__top__emptySpace} />
+
+            <div className={styles.Template__content__top__getInTouch}>
+              <img src={thunghiemPhoto} alt="thunghiem" />
+            </div>
           </div>
-          {children}
+
+          <div className={styles.Template__content__children}>{children}</div>
+
+          <div className={styles.Template__content__footer}>
+            <div className={styles.Template__content__footer__divider} />
+            <div className={styles.Template__content__footer__copyright}>
+              Copyright © 2020 Thu Nghiem
+            </div>
+          </div>
         </div>
       </div>
     </div>

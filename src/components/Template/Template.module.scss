@@ -5,20 +5,6 @@
   min-height: 100vh;
   background-color: $main-background-color;
 
-  &__getInTouch {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: $spacing-md;
-
-    img {
-      width: 40px;
-      border-radius: $border-radius-md;
-      margin-left: $spacing-xs;
-      box-shadow: $box-shadow-md;
-    }
-  }
-
   &__sideNavigation {
     background-color: $secondary-color;
     display: flex;
@@ -26,6 +12,32 @@
     margin: $spacing-sm;
     border-radius: $border-radius-md;
     max-height: 100vh;
+    transition: margin 0.15s ease-in-out;
+    position: relative;
+
+    &__bars {
+      position: absolute;
+      right: -34px - $spacing-md;
+      top: $spacing-lg;
+      background-color: $secondary-color;
+      color: $primary-text-color;
+      padding: $spacing-sm;
+      border-radius: $border-radius-xs;
+      box-shadow: $box-shadow-md;
+      cursor: pointer;
+      transition: background-color 0.25s ease-in-out;
+      z-index: 10;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+
+      display: none;
+
+      @media screen and (max-width: 900px) {
+        display: block;
+      }
+    }
 
     &__flexSpacing {
       flex-grow: 1;
@@ -138,7 +150,11 @@
     }
 
     @media screen and (max-width: 900px) {
-      display: none;
+      margin: $spacing-xs;
+
+      &_hidden {
+        margin-left: -80px;
+      }
     }
   }
 
@@ -155,9 +171,55 @@
 
   &__content {
     margin: 0 auto;
-    margin-bottom: $spacing-xl * 3;
     margin-top: $spacing-xl;
     max-width: 960px;
     padding: 0 $spacing-lg;
+
+    &__top {
+      display: flex;
+      align-items: center;
+
+      &__emptySpace {
+        flex-grow: 1;
+      }
+
+      &__getInTouch {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        img {
+          width: 40px;
+          border-radius: $border-radius-md;
+          margin-left: $spacing-xs;
+          box-shadow: $box-shadow-md;
+        }
+      }
+    }
+
+    &__children {
+      min-height: calc(100vh - 210px);
+    }
+
+    &__footer {
+      margin-top: $spacing-xl * 2;
+      text-align: center;
+      margin-bottom: $spacing-xl;
+
+      &__divider {
+        width: 20vw;
+        margin: 0 auto;
+        height: 2px;
+        background-color: $grey4;
+      }
+
+      &__copyright {
+        margin-top: $spacing-sm;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      padding: 0 $spacing-md;
+    }
   }
 }

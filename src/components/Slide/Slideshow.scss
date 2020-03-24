@@ -4,6 +4,7 @@
   position: relative;
   display: block;
   outline: none;
+  z-index: 0;
 }
 .bss-slides figure {
   position: absolute;
@@ -15,6 +16,7 @@
     display: block;
   }
 }
+
 .bss-slides figure:first-child {
   position: relative;
 }
@@ -46,12 +48,8 @@
   @media screen and (max-width: 900px) {
     margin: 0;
     margin-top: $spacing-xs;
-    width: 60%;
 
     .photo-label {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       font-size: $font-size-md;
       font-weight: 500;
     }
@@ -69,7 +67,7 @@
 .bss-next,
 .bss-prev {
   position: absolute;
-  bottom: 0;
+  bottom: 1%;
   z-index: 3;
   user-select: none;
   background-color: $grey5;
@@ -97,7 +95,7 @@
   background-color: $secondary-color;
 
   @media screen and (max-width: 900px) {
-    right: 0;
+    display: none;
   }
 }
 

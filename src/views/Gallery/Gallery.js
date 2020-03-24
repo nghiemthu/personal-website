@@ -24,6 +24,8 @@ const Gallery = () => {
 
       <h4>All photos</h4>
 
+      <div>Travelling</div>
+
       <Grid gapSize="lg">
         {[
           {
@@ -44,12 +46,19 @@ const Gallery = () => {
             imgSrc:
               "https://images.unsplash.com/photo-1584346884836-46e6d0d72db4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 
-            caption: "Some caption",
+            caption: "Praesent ac purus ac lorem sollicitudin faucibus.",
             time: "August 2019"
           },
           {
             imgSrc:
               "https://images.unsplash.com/photo-1584430437982-a63466a16d41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+
+            caption: "Some caption",
+            time: "August 2019"
+          },
+          {
+            imgSrc:
+              "https://images.unsplash.com/photo-1584895738330-2e2cae9e8355?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80",
 
             caption: "Some caption",
             time: "August 2019"

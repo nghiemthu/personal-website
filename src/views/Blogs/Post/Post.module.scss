@@ -14,5 +14,7 @@
 
   img {
     border-radius: $border-radius-sm;
+    max-width: 80vw;
+    height: auto;
   }
 }
