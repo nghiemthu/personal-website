@@ -81,13 +81,13 @@
   background-color: $secondary-color;
   color: $primary-text-color;
   font-weight: bold;
-  box-shadow: $box-shadow-sm;
 }
 
 .bss-next:hover,
 .bss-prev:hover {
   cursor: pointer;
   opacity: 1;
+  box-shadow: $box-shadow-sm;
 }
 
 .bss-next {

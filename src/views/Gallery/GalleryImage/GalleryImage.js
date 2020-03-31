@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./GalleryImage.module.scss";
 
-const GalleryImage = ({ imgSrc, time, caption }) => {
+const GalleryImage = ({ imgSrc, time, caption, ...props }) => {
   return (
-    <div className={styles.GalleryImage}>
+    <div className={styles.GalleryImage} {...props}>
       <div className={styles.GalleryImage__wrapper}>
         <img src={imgSrc} alt={caption} />
         <div className={styles.GalleryImage__hoverBackground}></div>

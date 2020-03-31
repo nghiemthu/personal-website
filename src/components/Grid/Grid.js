@@ -11,8 +11,9 @@ const Grid = ({ children, gapSize, columns = 3, ...props }) => {
       ])}
       {...props}
     >
-      {children.map(child => (
+      {children.map((child, key) => (
         <div
+          key={key}
           className={classNames([
             styles.Grid__item,
             {
