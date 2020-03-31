@@ -47,7 +47,7 @@ const Contact = () => {
           type="email"
           id="emailAdrress"
           name="emailAdrress"
-          placeholder="Your last name.."
+          placeholder="Your email.."
           maxlength="50"
           required
         />
@@ -55,9 +55,9 @@ const Contact = () => {
         <Input
           label="Website address"
           type="url"
-          id="emailAdrress"
-          name="lastname"
-          placeholder="Your last name.."
+          id="website"
+          name="website"
+          placeholder="Your website address.."
           maxlength="50"
           required
         />

@@ -15,10 +15,20 @@
     -moz-appearance: none;
     appearance: none;
     width: 100%;
-    padding: $spacing-sm;
+    padding: $spacing-md;
     border-radius: $border-radius-sm;
     border: 1px solid $grey4;
     box-shadow: none;
     margin-top: $spacing-xs;
+    font-size: $font-size-md;
+    outline: none;
+
+    &:focus {
+      border: 1px solid $secondary-color;
+    }
+
+    &::placeholder {
+      color: $grey5;
+    }
   }
 }
