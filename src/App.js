@@ -16,10 +16,6 @@ function App() {
     <Router>
       <Template>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-
           <Route path="/projects">
             <Projects />
           </Route>
@@ -42,6 +38,10 @@ function App() {
 
           <Route path="/contact">
             <Contact />
+          </Route>
+
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </Template>
