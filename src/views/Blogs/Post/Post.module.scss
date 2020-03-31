@@ -3,13 +3,32 @@
 .Post {
   margin-top: $spacing-lg;
 
-  &__title {
+  &__backButton {
+    text-decoration: none;
+    color: $secondary-color;
+    border-bottom: 1px solid $secondary-color;
     font-weight: 500;
-    font-size: $font-size-lg;
+
+    &:hover {
+      color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: $font-size-xxl;
+    margin-top: $spacing-md;
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: $font-size-md;
+    color: $grey8;
   }
 
   &__content {
-    margin-top: $spacing-lg;
+    margin-top: $spacing-xl;
   }
 
   img {
