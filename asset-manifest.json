@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/personal-website/static/css/main.3bbada12.chunk.css",
+    "main.js": "/personal-website/static/js/main.10c630b3.chunk.js",
+    "main.js.map": "/personal-website/static/js/main.10c630b3.chunk.js.map",
+    "runtime-main.js": "/personal-website/static/js/runtime-main.ce7e624a.js",
+    "runtime-main.js.map": "/personal-website/static/js/runtime-main.ce7e624a.js.map",
+    "static/js/2.769ff93a.chunk.js": "/personal-website/static/js/2.769ff93a.chunk.js",
+    "static/js/2.769ff93a.chunk.js.map": "/personal-website/static/js/2.769ff93a.chunk.js.map",
+    "index.html": "/personal-website/index.html",
+    "precache-manifest.2ec3ada73e8bf25346c48c3335627f9c.js": "/personal-website/precache-manifest.2ec3ada73e8bf25346c48c3335627f9c.js",
+    "service-worker.js": "/personal-website/service-worker.js",
+    "static/css/main.3bbada12.chunk.css.map": "/personal-website/static/css/main.3bbada12.chunk.css.map",
+    "static/js/2.769ff93a.chunk.js.LICENSE.txt": "/personal-website/static/js/2.769ff93a.chunk.js.LICENSE.txt",
+    "static/media/thunghiem.png": "/personal-website/static/media/thunghiem.0f53a506.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ce7e624a.js",
+    "static/js/2.769ff93a.chunk.js",
+    "static/css/main.3bbada12.chunk.css",
+    "static/js/main.10c630b3.chunk.js"
+  ]
+}
