@@ -9,6 +9,7 @@ import Gallery from "views/Gallery/Gallery";
 import Skills from "views/Skills/Skills";
 import Blogs from "views/Blogs/Blogs";
 import Post from "views/Blogs/Post/Post";
+import Contact from "views/Contact/Contact";
 
 function App() {
   return (
@@ -37,6 +38,10 @@ function App() {
 
           <Route path="/blogs">
             <Blogs />
+          </Route>
+
+          <Route path="/contact">
+            <Contact />
           </Route>
         </Switch>
       </Template>

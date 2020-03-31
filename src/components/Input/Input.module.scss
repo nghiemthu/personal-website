@@ -1,0 +1,21 @@
+@import "styles/common.scss";
+
+.Input {
+  margin-bottom: $spacing-lg;
+
+  label {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: 600;
+    color: $grey7;
+  }
+
+  input {
+    width: 100%;
+    padding: $spacing-sm;
+    border-radius: $border-radius-sm;
+    border: 1px solid $grey4;
+    box-shadow: none;
+    margin-top: $spacing-xs;
+  }
+}

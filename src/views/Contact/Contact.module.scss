@@ -1,0 +1,19 @@
+@import "styles/common.scss";
+
+.Contact {
+  margin-top: $spacing-lg;
+
+  button {
+    padding: $spacing-sm;
+    border: none;
+    background-color: $secondary-color;
+    color: white;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
