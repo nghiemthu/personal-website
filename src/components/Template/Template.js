@@ -75,7 +75,7 @@ const Template = ({ children }) => {
         <div className={styles.Template__sideNavigation__logo}>Tuu.</div>
 
         <div className={styles.Template__sideNavigation__tabs}>
-          <TemplateTab to="/" label="Home" faIcon={faHome} />
+          <TemplateTab to="/personal-website" label="Home" faIcon={faHome} />
 
           <TemplateTab to="/projects" label="Projects" faIcon={faLaptopCode} />
 
