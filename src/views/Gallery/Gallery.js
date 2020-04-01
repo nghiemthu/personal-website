@@ -18,7 +18,7 @@ const Gallery = () => {
         <div className={styles.Gallery__intro__hashtag}>#Myself</div>
       </div>
 
-      <h4>My life in Finland</h4>
+      <h4>Featured photos</h4>
 
       <Slideshow />
 

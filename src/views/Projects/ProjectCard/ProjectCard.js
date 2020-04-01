@@ -3,7 +3,7 @@ import styles from "./ProjectCard.module.scss";
 import classnames from "classnames";
 
 const ProjectCard = ({
-  project: { projectName, description, level, skills, group, imgSrc }
+  project: { projectName, description, level, tags, group, imgSrc }
 }) => {
   const isWeb = group === "Web";
   const isDesign = group === "Design";
@@ -40,8 +40,10 @@ const ProjectCard = ({
         <h3 className={styles.ProjectCard__name}>{projectName}</h3>
 
         <div className={styles.ProjectCard__tagWrapper}>
-          {skills.map(skill => (
-            <span className={styles.ProjectCard__tagWrapper__tag}>{skill}</span>
+          {tags.map(tag => (
+            <span className={styles.ProjectCard__tagWrapper__tag} key={tag}>
+              {tag}
+            </span>
           ))}
         </div>
 
