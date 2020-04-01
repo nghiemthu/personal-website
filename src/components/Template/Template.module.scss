@@ -17,7 +17,7 @@
 
     &__bars {
       position: absolute;
-      right: -34px - $spacing-md;
+      right: -50px - $spacing-md;
       top: $spacing-lg;
       background-color: $secondary-color;
       color: $primary-text-color;
@@ -27,6 +27,9 @@
       cursor: pointer;
       transition: background-color 0.25s ease-in-out;
       z-index: 10;
+      width: 40px;
+
+      text-align: center;
 
       &:hover {
         background-color: $primary-color;

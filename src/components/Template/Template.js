@@ -16,8 +16,8 @@ import {
   faPen,
   faImages,
   faEnvelope,
-  faChevronRight,
-  faChevronLeft
+  faChevronLeft,
+  faBars
 } from "@fortawesome/free-solid-svg-icons";
 import thunghiemPhoto from "resources/images/homepage/thunghiem.png";
 
@@ -67,9 +67,7 @@ const Template = ({ children }) => {
           className={styles.Template__sideNavigation__bars}
           onClick={() => setNavigationHidden(!navigationHidden)}
         >
-          <FontAwesomeIcon
-            icon={navigationHidden ? faChevronRight : faChevronLeft}
-          />
+          <FontAwesomeIcon icon={navigationHidden ? faBars : faChevronLeft} />
         </div>
 
         <div className={styles.Template__sideNavigation__logo}>Tuu.</div>
