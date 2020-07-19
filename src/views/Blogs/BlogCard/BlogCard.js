@@ -1,14 +1,18 @@
 import React from "react";
 import moment from "moment";
 import styles from "./BlogCard.module.scss";
-import { Link } from "react-router-dom";
 
-const BlogCard = ({ post: { images, published, title, id } }) => {
+const BlogCard = ({ image, published, title, link }) => {
   return (
-    <Link to={`/blogs/${id}`} className={styles.BlogCard__link}>
-      <div key={id} className={styles.BlogCard}>
+    <a
+      href={link}
+      className={styles.BlogCard__link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div key={title} className={styles.BlogCard}>
         <div className={styles.BlogCard__img}>
-          <img src={images[0].url} alt="title" />
+          <img src={image} alt="title" />
         </div>
         <div className={styles.BlogCard__details}>
           <div className={styles.BlogCard__details__title}>{title}</div>
@@ -17,7 +21,7 @@ const BlogCard = ({ post: { images, published, title, id } }) => {
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 

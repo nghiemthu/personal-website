@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Home.module.scss";
 import HomeCard from "./HomeCard/HomeCard";
 import Grid from "components/Grid/Grid";
+import moment from "moment";
 
 const Home = () => {
   return (
@@ -72,6 +73,10 @@ const Home = () => {
             imgSrc="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
           />
         </Grid>
+      </div>
+
+      <div style={{ marginTop: "32px" }}>
+        {moment().format("MMMM Do YYYY, h:mm:ss a")}
       </div>
     </div>
   );

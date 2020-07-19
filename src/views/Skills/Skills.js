@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Skills.module.scss";
 import thunghiemPhoto from "resources/images/homepage/thunghiem.png";
 import Grid from "components/Grid/Grid";
@@ -14,15 +14,134 @@ import {
   faUnity,
   faNodeJs,
   faJava,
-  faFigma
+  faFigma,
 } from "@fortawesome/free-brands-svg-icons";
 import { faFilePowerpoint } from "@fortawesome/free-solid-svg-icons";
 import LanguageCard from "./LanguageCard/LanguageCard";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
+import Input from "components/Input/Input";
+import { useForm } from "react-hook-form";
+import cn from "classnames";
+
+const defaultExperiences = [
+  {
+    title: "Founder",
+    company: "Dev Challenges",
+    duration: "Jun 2020 – Present",
+    location: "Helsinki, Southern Finland, Finland",
+    imgScr:
+      "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/logo_2.png?alt=media&token=a5155688-fbfa-4ece-b692-fe2326db7741",
+  },
+  {
+    title: "Software Engineer",
+    company: "Telia Finland",
+    duration: "Jun 2018 – Present",
+    location: "Helsinki, Southern Finland, Finland",
+    imgScr:
+      "https://upload.wikimedia.org/wikipedia/fi/thumb/2/23/Telia_logo.svg/1200px-Telia_logo.svg.png",
+  },
+  {
+    title: "Frontend Developer",
+    company: "Jobilla",
+    duration: "Dec 2017 – May 2018",
+    location: "Helsinki, Southern Finland, Finland",
+    imgScr: "https://jobilla.com/assets/jobilla-logos/jobilla_logo_color.png",
+  },
+  {
+    title: "Game Programmer",
+    company: "Stupid Stupid Games",
+    duration: "Jan 2017 – Apr 2017",
+    location: "Helsinki, Southern Finland, Finland",
+    imgScr:
+      "https://www.epressi.com/media/userfiles/106204/1520506387/stupidstupidgames_logo.png",
+  },
+];
 
 const Skills = () => {
+  const [experiences, setExperiences] = useState(defaultExperiences);
+  const [open, setOpen] = useState(false);
+
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    setExperiences([data, ...experiences.slice(0, 3)]);
+    setOpen(false);
+  };
+
   return (
     <div className={styles.Skills}>
+      <div
+        className={cn(styles.Skills_addForm, {
+          [styles.Skills_addForm__open]: open,
+        })}
+      >
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Input
+            id="title"
+            label="Title"
+            type="text"
+            name="title"
+            inputRef={register}
+            placeholder="Your title.."
+            maxlength="25"
+            required
+          />
+
+          <Input
+            inputRef={register}
+            id="company"
+            label="Company"
+            type="text"
+            name="company"
+            placeholder="Your company.."
+            maxlength="25"
+            required
+          />
+
+          <Input
+            inputRef={register}
+            id="duration"
+            label="Duration"
+            type="text"
+            name="duration"
+            placeholder="Duration.."
+            maxlength="25"
+            required
+          />
+
+          <Input
+            id="location"
+            label="Location"
+            type="text"
+            name="location"
+            placeholder="Location.."
+            maxlength="25"
+            required
+            inputRef={register}
+          />
+
+          <Input
+            inputRef={register}
+            id="imgScr"
+            label="Image URL"
+            type="text"
+            name="imgScr"
+            placeholder="Image Url.."
+            maxlength="100"
+            required
+          />
+
+          <button type="submit">Submit</button>
+
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            style={{ marginLeft: "12px", backgroundColor: "#888" }}
+          >
+            cancel
+          </button>
+        </form>
+      </div>
       <div className={styles.Skills__intro}>
         <div className={styles.Skills__intro__img}>
           <img src={thunghiemPhoto} alt="thunghiem" />
@@ -42,7 +161,7 @@ const Skills = () => {
               faSass,
               faReact,
               faVuejs,
-              faBootstrap
+              faBootstrap,
             ]}
             label="Creating Websites"
             imgScr="https://images.unsplash.com/photo-1539278670307-a69d04dc8a75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
@@ -105,31 +224,22 @@ const Skills = () => {
       </div>
 
       <div className={styles.Skills__experiences}>
-        <h4>Experiences</h4>
+        <div className={styles.Skills__experiences_heading}>
+          <h4>Experiences</h4>
+          <div className={styles.Skills__experiences_heading_space} />
+          <button onClick={() => setOpen(true)}>Add</button>
+        </div>
+
         <Grid columns={2}>
-          <ExperienceCard
-            title="Frontend Developer"
-            company="Telia Finland"
-            duration="Jun 2018 – Present"
-            location="Helsinki, Southern Finland, Finland"
-            imgScr="https://media-exp1.licdn.com/dms/image/C4E0BAQFbBsIWNqaqiw/company-logo_100_100/0?e=1593043200&v=beta&t=H-2A8A_23ocXmF4fzw5AG0RhpMcFGR5G3YCBKzReFR0"
-          />
-
-          <ExperienceCard
-            title="Frontend Developer"
-            company="Jobilla"
-            duration="Dec 2017 – May 2018"
-            location="Helsinki, Southern Finland, Finland"
-            imgScr="https://media-exp1.licdn.com/dms/image/C4D0BAQH35EhcqjwOGg/company-logo_100_100/0?e=1593043200&v=beta&t=ZSEZXmRJAnCcuFzeVMhTnRUqxdqK2nA7KV1cda9MoOs"
-          />
-
-          <ExperienceCard
-            title="Game Programmer"
-            company="Stupid Stupid Games"
-            duration="Jan 2017 – Apr 2017"
-            location="Helsinki, Southern Finland, Finland"
-            imgScr="https://media-exp1.licdn.com/dms/image/C560BAQEVNUgLPshfqQ/company-logo_100_100/0?e=1593043200&v=beta&t=qyQuvY3DDPMJ8u4fxW7Uo196kZ0DKgOD3qk-BdTkHpU"
-          />
+          {experiences.map(({ title, company, duration, location, imgScr }) => (
+            <ExperienceCard
+              title={title}
+              company={company}
+              duration={duration}
+              location={location}
+              imgScr={imgScr}
+            />
+          ))}
         </Grid>
       </div>
     </div>

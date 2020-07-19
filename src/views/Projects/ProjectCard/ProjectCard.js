@@ -3,7 +3,8 @@ import styles from "./ProjectCard.module.scss";
 import classnames from "classnames";
 
 const ProjectCard = ({
-  project: { projectName, description, level, tags, group, imgSrc }
+  project: { projectName, description, level, tags, group, imgSrc },
+  ...props
 }) => {
   const isWeb = group === "Web";
   const isDesign = group === "Design";
@@ -11,24 +12,25 @@ const ProjectCard = ({
 
   return (
     <div
+      {...props}
       className={classnames([
         styles.ProjectCard,
-        { [styles.ProjectCard_imageSpace]: !!imgSrc }
+        { [styles.ProjectCard_imageSpace]: !!imgSrc },
       ])}
     >
       <div
         className={classnames([
           styles.ProjectCard__wrapper,
           {
-            [styles.ProjectCard_color1]: isWeb
+            [styles.ProjectCard_color1]: isWeb,
           },
           {
-            [styles.ProjectCard_color2]: isDesign
+            [styles.ProjectCard_color2]: isDesign,
           },
           {
-            [styles.ProjectCard_color3]: isGame
+            [styles.ProjectCard_color3]: isGame,
           },
-          { [styles.ProjectCard__wrapper_imageSpace]: !!imgSrc }
+          { [styles.ProjectCard__wrapper_imageSpace]: !!imgSrc },
         ])}
       >
         {imgSrc && (
@@ -40,7 +42,7 @@ const ProjectCard = ({
         <h3 className={styles.ProjectCard__name}>{projectName}</h3>
 
         <div className={styles.ProjectCard__tagWrapper}>
-          {tags.map(tag => (
+          {tags.map((tag) => (
             <span className={styles.ProjectCard__tagWrapper__tag} key={tag}>
               {tag}
             </span>
@@ -57,14 +59,14 @@ const ProjectCard = ({
           className={classnames([
             styles.ProjectCard__buttonWrapper,
             {
-              [styles.ProjectCard__buttonWrapper_color1]: isWeb
+              [styles.ProjectCard__buttonWrapper_color1]: isWeb,
             },
             {
-              [styles.ProjectCard__buttonWrapper_color2]: isDesign
+              [styles.ProjectCard__buttonWrapper_color2]: isDesign,
             },
             {
-              [styles.ProjectCard__buttonWrapper_color3]: isGame
-            }
+              [styles.ProjectCard__buttonWrapper_color3]: isGame,
+            },
           ])}
         >
           <div className={styles.ProjectCard__buttonWrapper__boxAbove} />

@@ -8,9 +8,13 @@
 
   &__img {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-self: center;
 
     img {
       display: block;
+      width: 50px;
       margin: 0 auto;
     }
   }

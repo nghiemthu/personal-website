@@ -1,6 +1,47 @@
 @import "styles/common.scss";
 
 .Projects {
+  position: relative;
+
+  &_scrollIndicator {
+    position: fixed;
+
+    z-index: 1000;
+    top: $spacing-md;
+    right: $spacing-xl;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: $spacing-xl + 2px;
+      width: 5px;
+      height: 22px;
+      border-radius: $border-radius-xs;
+
+      background-color: $color1;
+    }
+  }
+
+  &_notification {
+    position: fixed;
+
+    top: $spacing-xl;
+    right: $spacing-xl;
+    z-index: 90;
+
+    background-color: white;
+    padding: $spacing-xl;
+    box-shadow: $box-shadow-md;
+    border-radius: $border-radius-xs;
+    border-left: 5px solid $color1;
+
+    transform: translateX(200%);
+    transition: transform 0.5s ease-in-out;
+
+    &__open {
+      transform: translateX(0);
+    }
+  }
   &__overview {
     margin-top: $spacing-xl;
 

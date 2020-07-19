@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faYoutube,
   faInstagram,
-  faTwitter
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import classNames from "classnames";
 
@@ -17,7 +17,7 @@ import {
   faImages,
   faEnvelope,
   faChevronLeft,
-  faBars
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import thunghiemPhoto from "resources/images/homepage/thunghiem.png";
 
@@ -29,7 +29,7 @@ const TemplateTab = ({ to, label, faIcon }) => {
     <Link
       to={to}
       className={classNames(styles.Template__sideNavigation__tabs__tab, {
-        [styles.Template__sideNavigation__tabs__tab_active]: active
+        [styles.Template__sideNavigation__tabs__tab_active]: active,
       })}
     >
       {active && (
@@ -60,7 +60,7 @@ const Template = ({ children }) => {
       <div
         className={classNames([
           styles.Template__sideNavigation,
-          { [styles.Template__sideNavigation_hidden]: navigationHidden }
+          { [styles.Template__sideNavigation_hidden]: navigationHidden },
         ])}
       >
         <div
@@ -101,7 +101,7 @@ const Template = ({ children }) => {
         </div>
       </div>
 
-      <div className={styles.Template__scrollable}>
+      <div className={styles.Template__scrollable} id="template">
         <div className={styles.Template__content}>
           <div className={styles.Template__content__top}>
             <div className={styles.Template__content__top__emptySpace} />

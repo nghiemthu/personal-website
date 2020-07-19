@@ -3,6 +3,12 @@
 .Input {
   margin-bottom: $spacing-lg;
 
+  &_error {
+    color: $color1;
+    font-size: $font-size-sm;
+    margin-top: 3px;
+  }
+
   label {
     display: block;
     font-size: $font-size-sm;

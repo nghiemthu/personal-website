@@ -8,6 +8,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.9",
+    "@hookform/resolvers": "0.0.6",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -15,12 +16,14 @@
     "gh-pages": "^2.2.0",
     "hammerjs": "^2.0.8",
     "html-react-parser": "^0.10.2",
-    "moment": "^2.24.0",
+    "moment": "^2.27.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-hook-form": "^6.0.8",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "yup": "^0.29.1"
   },
   "scripts": {
     "predeploy": "npm run build",
