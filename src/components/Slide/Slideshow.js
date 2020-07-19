@@ -55,8 +55,10 @@ const Slideshow = () => {
 
   return (
     <div className="bss-slides slideshow" tabIndex="1" autoFocus="autofocus">
-      {images.map((image) => (
-        <SlideshowImage image={image} />
+      {images.map((image, key) => (
+        <React.Fragment key={key}>
+          <SlideshowImage image={image} />
+        </React.Fragment>
       ))}
     </div>
   );

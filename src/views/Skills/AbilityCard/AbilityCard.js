@@ -20,13 +20,15 @@ const AbilityCard = ({ imgScr, label, technologies = [] }) => {
       <div className={styles.AbilityCard__label}>{label}</div>
 
       <div className={styles.AbilityCard__technologies}>
-        {technologies.map(icon => (
-          <FontAwesomeIcon
-            className={classnames(styles.AbilityCard__technologies__icon, {
-              [styles.AbilityCard_noDelay]: isHovered
-            })}
-            icon={icon}
-          />
+        {technologies.map((icon, key) => (
+          <React.Fragment key={key}>
+            <FontAwesomeIcon
+              className={classnames(styles.AbilityCard__technologies__icon, {
+                [styles.AbilityCard_noDelay]: isHovered,
+              })}
+              icon={icon}
+            />
+          </React.Fragment>
         ))}
       </div>
     </div>

@@ -1,9 +1,16 @@
 import React from "react";
 import styles from "./ExperienceCard.module.scss";
 
-const ExperienceCard = ({ imgScr, title, company, duration, location }) => {
+const ExperienceCard = ({
+  imgScr,
+  title,
+  company,
+  duration,
+  location,
+  ...props
+}) => {
   return (
-    <div className={styles.ExperienceCard}>
+    <div className={styles.ExperienceCard} {...props}>
       <div className={styles.ExperienceCard__img}>
         <img alt={company} src={imgScr} />
       </div>

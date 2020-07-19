@@ -83,7 +83,7 @@ const Skills = () => {
             name="title"
             inputRef={register}
             placeholder="Your title.."
-            maxlength="25"
+            maxLength="25"
             required
           />
 
@@ -94,7 +94,7 @@ const Skills = () => {
             type="text"
             name="company"
             placeholder="Your company.."
-            maxlength="25"
+            maxLength="25"
             required
           />
 
@@ -105,7 +105,7 @@ const Skills = () => {
             type="text"
             name="duration"
             placeholder="Duration.."
-            maxlength="25"
+            maxLength="25"
             required
           />
 
@@ -115,7 +115,7 @@ const Skills = () => {
             type="text"
             name="location"
             placeholder="Location.."
-            maxlength="25"
+            maxLength="25"
             required
             inputRef={register}
           />
@@ -127,7 +127,7 @@ const Skills = () => {
             type="text"
             name="imgScr"
             placeholder="Image Url.."
-            maxlength="100"
+            maxLength="100"
             required
           />
 
@@ -238,6 +238,7 @@ const Skills = () => {
               duration={duration}
               location={location}
               imgScr={imgScr}
+              key={title}
             />
           ))}
         </Grid>
